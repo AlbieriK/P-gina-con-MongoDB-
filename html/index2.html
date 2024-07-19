@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moviland</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <a href="#" class="logo">Moviland</a>
+                <ul class="nav-links">
+                    <li><a href="/html/index.html">Inicio</a></li>
+                    <li><a href="/html/Productos.html">Productos</a></li>
+                    <li><a href="/html/contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        
+        <div class="card" onclick="openForm('Xelios Quantum x9')">
+            <img src="images/sGFo29t_R5K8rUu0FuPbTA.jpg" alt="Xelios Quantum x9">
+            <h2>Xelios Quantum x9</h2>
+            <p>Este telefono es bueno para tu trabajo, videojuegos y vida personal.</p>
+        </div>
+        <div class="card" onclick="openForm('NextTech Helix S5')">
+            <img src="images/94LLEx4dS5WvKWWA0UsvsQ.jpg" alt="NextTech Helix S5">
+            <h2>NextTech Helix S5</h2>
+            <p>Si eres fan del bicho, este telefono es para tí siuuuu.</p>
+        </div>
+        <div class="card" onclick="openForm('Aertheris Nova Z3')">
+            <img src="images/PNtVNMHBR5K8prWtfqaFog.jpg" alt="Aertheris Nova Z3">
+            <h2>Aertheris Nova Z3</h2>
+            <p>Especial para videojuegos (:.</p>
+        </div>
+        <div class="card" onclick="openForm('Solara Lumina Pro')">
+            <img src="images/-DKCT0kFRfOroV0UsdfJXQ.jpg" alt="Solara Lumina Pro">
+            <h2>Solara Lumina Pro</h2>
+            <p>Aiudaaaa, no se que poner xdxdxd.</p>
+        </div>
+        <div class="card" onclick="openForm('Orion Apex Z3')">
+            <img src="images/ekyAL4zdSWCjp4gshLUzxg.jpg" alt="Orion Apex Z3">
+            <h2>Orion Apex Z3</h2>
+            <p>skopdjhghfewiuhlhf.</p>
+        </div>
+        <div class="card" onclick="openForm('Vortex V5 Edge')">
+            <img src="images/kf0ioFD7TNuOpHbsNIHm0w.jpg" alt="Vortex V5 Edge">
+            <h2>Vortex V5 Edge</h2>
+            <p>Buena para selfies</p>
+        </div>
+    </main>
+    
+
+    <div id="form-popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closeForm()">&times;</span>
+            <h2 id="form-title">formulario:</h2>
+            <form id="purchase-form" class="purchase-form" action="http://localhost:3000/submit-form" method="POST" onsubmit="submitForm(event)">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+            
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+            
+                <label for="phone">Teléfono:</label>
+                <input type="tel" id="phone" name="phone" required>
+            
+                <label for="address">Pais, estado, ciudad, dirección numero de casa y especificaiones</label>
+                <textarea id="address" name="address" rows="4" required></textarea>
+            
+                <button type="submit">Continuar</button>
+            </form>
+            
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
